@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kSA-s3-KPa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SixtCars" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEF-T5-lpn">
+                                <rect key="frame" x="0.0" y="19" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="CarsList" id="oGU-gE-ama"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="157" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KMs-Gx-92D">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="S1y-Kg-2ig"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l3d-Dl-yN3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KMs-Gx-92D" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="4ur-Wx-D03"/>
+                            <constraint firstItem="KMs-Gx-92D" firstAttribute="trailing" secondItem="uEF-T5-lpn" secondAttribute="trailing" id="EZA-W1-Fbc"/>
+                            <constraint firstItem="uEF-T5-lpn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bYC-oF-wg3"/>
+                            <constraint firstItem="KMs-Gx-92D" firstAttribute="top" secondItem="uEF-T5-lpn" secondAttribute="bottom" constant="1" id="ktl-zk-ipH"/>
+                            <constraint firstAttribute="trailing" secondItem="uEF-T5-lpn" secondAttribute="trailing" id="lNv-GY-yip"/>
+                            <constraint firstItem="uEF-T5-lpn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="19" id="lWE-ed-7s8"/>
+                            <constraint firstItem="KMs-Gx-92D" firstAttribute="leading" secondItem="uEF-T5-lpn" secondAttribute="leading" id="yrA-2N-oIc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="e66-ya-95C"/>
+                    <connections>
+                        <outlet property="carsTableView" destination="KMs-Gx-92D" id="e4I-tg-gja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.79999999999995" y="138.98050974512745"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="fAv-Ks-qsg">
+            <objects>
+                <viewController id="Q5E-e6-uON" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oGs-VD-479"/>
+                        <viewControllerLayoutGuide type="bottom" id="wqk-7X-bYt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="45R-FW-fGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESG-8l-lZs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ESG-8l-lZs" firstAttribute="leading" secondItem="45R-FW-fGZ" secondAttribute="leading" id="God-sj-0u5"/>
+                            <constraint firstItem="ESG-8l-lZs" firstAttribute="bottom" secondItem="wqk-7X-bYt" secondAttribute="top" id="N9X-d4-R2W"/>
+                            <constraint firstAttribute="trailing" secondItem="ESG-8l-lZs" secondAttribute="trailing" id="bqs-Gm-PqT"/>
+                            <constraint firstItem="ESG-8l-lZs" firstAttribute="top" secondItem="45R-FW-fGZ" secondAttribute="top" id="kDD-a5-UE8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map" id="JxT-Id-KVJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NtO-lC-kLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813.60000000000002" y="796.55172413793105"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8cd-7O-gCe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kSA-s3-KPa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="yJ2-2t-2qY">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vTY-xD-pa2"/>
+                        <segue destination="Q5E-e6-uON" kind="relationship" relationship="viewControllers" id="FLe-LM-6p1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyU-8F-py6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138.40000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home" width="25" height="25"/>
+        <image name="Map" width="32" height="32"/>
+    </resources>
+</document>
